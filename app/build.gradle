@@ -33,6 +33,7 @@ android {
             res.srcDirs = [
                     "src/main/res",
                     "src/main/res-screen/splash",
+                    "src/main/res-screen/main",
             ]
         }
     }

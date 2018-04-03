@@ -1,5 +1,6 @@
 package com.iko.android.weather.ui.splash;
 
+import android.content.Intent;
 import android.graphics.drawable.Animatable2;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
@@ -14,6 +15,7 @@ import com.iko.android.weather.BR;
 import com.iko.android.weather.R;
 import com.iko.android.weather.databinding.ActivitySplashBinding;
 import com.iko.android.weather.ui.base.BaseActivity;
+import com.iko.android.weather.ui.main.MainActivity;
 
 import javax.inject.Inject;
 
@@ -79,6 +81,8 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, SplashVi
     }
 
     private void openMainActivity(){
-        Log.i("TAG", "openMainActivity: ");
+        Intent intent = MainActivity.getStartIntent(this);
+        startActivity(intent);
+        finish();
     }
 }
