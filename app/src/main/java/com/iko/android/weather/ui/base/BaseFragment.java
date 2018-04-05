@@ -53,7 +53,7 @@ public abstract class BaseFragment<T extends ViewDataBinding, V extends  BaseVie
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        dataBinding.setVariable(getBindingVariable(), view);
+        dataBinding.setVariable(getBindingVariable(), viewModel);
         dataBinding.executePendingBindings();
     }
 

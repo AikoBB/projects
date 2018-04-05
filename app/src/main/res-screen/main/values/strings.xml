@@ -3,4 +3,9 @@
     <string name="main_bottom_nav_today">Today</string>
     <string name="main_bottom_nav_weekly">Weekly</string>
     <string name="main_bottom_nav_favs">Favorites</string>
+
+    <string name="precipitation">PRECIPITATION</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="wind">WIND</string>
+    <string name="direction">DIRECTION</string>
 </resources>
