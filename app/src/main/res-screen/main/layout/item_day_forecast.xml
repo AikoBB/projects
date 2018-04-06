@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.iko.android.weather.ui.main.weekly.adapter.DayForecastItemViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@{viewModel.weekDay}"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_xxmedium"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/weather_lightning_rainy"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{viewModel.maxDegree}"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_xxmedium"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{viewModel.minDegree}"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_xxmedium"/>
+
+    </LinearLayout>
+</layout>

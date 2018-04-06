@@ -18,7 +18,7 @@
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="230dp"
                 android:background="@android:color/darker_gray">
 
                 <RelativeLayout
@@ -106,16 +106,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:drawableLeft="@drawable/water_percent"
-                            android:text="0%"
-                            android:textColor="@color/textColor"
-                            android:textSize="@dimen/text_medium"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:drawableLeft="@drawable/water_percent"
                             android:text="24%"
                             android:textColor="@color/textColor"
                             android:textSize="@dimen/text_medium"
@@ -141,6 +131,16 @@
                             android:textSize="@dimen/text_medium"
                             android:textStyle="bold"/>
 
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_visibility"
+                            android:text="16.1"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold"/>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -153,13 +153,6 @@
                         android:layout_marginBottom="10dp"
                         android:weightSum="4">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/precipitation"
-                            android:textColor="@color/brightBlue"
-                            android:textSize="@dimen/text_xxxsmall"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -187,11 +180,117 @@
                             android:textColor="@color/brightBlue"
                             android:textSize="@dimen/text_xxxsmall"/>
 
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/visibility"
+                            android:textColor="@color/brightBlue"
+                            android:textSize="@dimen/text_xxxsmall"/>
+
                     </LinearLayout>
 
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pressure"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="101.192kPa"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sunrise"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="05:14"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sunset"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="19:35"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/uvindex"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="101.192kPa"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_xxmedium"/>
+            </LinearLayout>
+
         </LinearLayout>
 
     </FrameLayout>

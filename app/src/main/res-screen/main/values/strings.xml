@@ -4,8 +4,15 @@
     <string name="main_bottom_nav_weekly">Weekly</string>
     <string name="main_bottom_nav_favs">Favorites</string>
 
-    <string name="precipitation">PRECIPITATION</string>
+    <string name="visibility">VISIBILITY</string>
     <string name="humidity">HUMIDITY</string>
     <string name="wind">WIND</string>
     <string name="direction">DIRECTION</string>
+
+    <string name="pressure">Pressure</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="uvindex">UIV Index</string>
+
+    <string name="warning_empty_list">Empty List!</string>
 </resources>

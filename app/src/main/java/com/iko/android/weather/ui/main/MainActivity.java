@@ -14,6 +14,7 @@ import com.iko.android.weather.R;
 import com.iko.android.weather.databinding.ActivityMainBinding;
 import com.iko.android.weather.ui.base.BaseActivity;
 import com.iko.android.weather.ui.main.daily.DailyForecastFragment;
+import com.iko.android.weather.ui.main.weekly.WeeklyForecastFragment;
 
 import javax.inject.Inject;
 
@@ -58,6 +59,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
                         showFragment(DailyForecastFragment.newInstance(), DailyForecastFragment.TAG);
                         return true;
                     case R.id.menu_weekly:
+                        showFragment(WeeklyForecastFragment.newInstance(), WeeklyForecastFragment.TAG);
                         return true;
                     case R.id.menu_favs:
                         return true;

@@ -9,6 +9,9 @@ import android.view.View;
 
 public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
 
+    public static final int VIEW_TYPE_EMPTY = 0;
+    public static final int VIEW_TYPE_NORMAL = 1;
+
     public BaseViewHolder(View itemView) {
         super(itemView);
     }
