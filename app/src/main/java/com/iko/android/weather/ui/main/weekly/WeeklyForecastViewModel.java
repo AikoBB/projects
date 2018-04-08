@@ -26,13 +26,13 @@ public class WeeklyForecastViewModel extends BaseViewModel<WeeklyForecastNavigat
     }
 
     public void fetchForecastForWeek(){
-        ForeCast monday = new ForeCast("Monday", "18\\u00B0", "10\\u00B0", "Partly Cloudy");
-        ForeCast tuesday = new ForeCast("Tuesday", "28\\u00B0", "15\\u00B0", "Partly Cloudy");
-        ForeCast wednesday = new ForeCast("Wednesday", "20\\u00B0", "14\\u00B0", "Partly Cloudy");
-        ForeCast thursday = new ForeCast("Thursday", "22\\u00B0", "18\\u00B0", "Partly Cloudy");
-        ForeCast friday = new ForeCast("Friday", "24\\u00B0", "12\\u00B0", "Partly Cloudy");
-        ForeCast saturday = new ForeCast("Saturday", "26\\u00B0", "16\\u00B0", "Partly Cloudy");
-        ForeCast sunday = new ForeCast("Sunday", "26\\u00B0", "16\\u00B0", "Partly Cloudy");
+        ForeCast monday = new ForeCast("Monday", "18\u00B0", "10\u00B0", "Partly Cloudy");
+        ForeCast tuesday = new ForeCast("Tuesday", "28\u00B0", "15\u00B0", "Partly Cloudy");
+        ForeCast wednesday = new ForeCast("Wednesday", "20\u00B0", "14\u00B0", "Partly Cloudy");
+        ForeCast thursday = new ForeCast("Thursday", "22\u00B0", "18\u00B0", "Partly Cloudy");
+        ForeCast friday = new ForeCast("Friday", "24\u00B0", "12\u00B0", "Partly Cloudy");
+        ForeCast saturday = new ForeCast("Saturday", "26\u00B0", "16\u00B0", "Partly Cloudy");
+        ForeCast sunday = new ForeCast("Sunday", "26\u00B0", "16\u00B0", "Partly Cloudy");
         List<ForeCast> foreCasts = new ArrayList<>();
         foreCasts.add(monday);
         foreCasts.add(tuesday);
@@ -46,7 +46,7 @@ public class WeeklyForecastViewModel extends BaseViewModel<WeeklyForecastNavigat
 
     public void addForecastsToList(List<ForeCast> foreCasts){
         forecastList.clear();
-        foreCasts.addAll(foreCasts);
+        forecastList.addAll(foreCasts);
     }
     public ObservableArrayList<ForeCast> getForecastList() {
         return forecastList;

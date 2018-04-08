@@ -1,4 +1,4 @@
-package com.iko.android.weather.ui.main.weekly;
+package com.iko.android.weather.ui.main.favorites;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
@@ -9,41 +9,41 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import com.iko.android.weather.BR;
 import com.iko.android.weather.R;
 import com.iko.android.weather.data.model.ForeCast;
-import com.iko.android.weather.databinding.FragmentWeeklyForecastBinding;
+import com.iko.android.weather.databinding.FragmentFavoritesBinding;
 import com.iko.android.weather.ui.base.BaseFragment;
-import com.iko.android.weather.ui.main.weekly.adapter.WeekForecastAdapter;
+import com.iko.android.weather.ui.main.favorites.adapter.FavoriteCountriesAdapter;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
 /**
- * Created by Aigerim on 4/6/2018.
+ * Created by Aigerim on 4/8/2018.
  */
 
-public class WeeklyForecastFragment extends BaseFragment<FragmentWeeklyForecastBinding, WeeklyForecastViewModel>
-                                    implements WeeklyForecastNavigator {
-    public static final String TAG = "WeeklyForecastFragment";
+public class FavoritesFragment extends BaseFragment<FragmentFavoritesBinding, FavoritesViewModel>
+                                implements FavoritesNavigator {
+
+    public static final String TAG = "FavoritesFragment";
 
     @Inject
     ViewModelProvider.Factory viewModelFactory;
     @Inject
-    LinearLayoutManager layoutManager;
+    FavoriteCountriesAdapter adapter;
     @Inject
-    WeekForecastAdapter adapter;
+    LinearLayoutManager layoutManager;
 
-    private WeeklyForecastViewModel viewModel;
-    private FragmentWeeklyForecastBinding ui;
+    private FavoritesViewModel viewModel;
+    private FragmentFavoritesBinding ui;
 
-    public static WeeklyForecastFragment newInstance(){
+    public static FavoritesFragment newInstance(){
         Bundle args = new Bundle();
-        WeeklyForecastFragment fragment = new WeeklyForecastFragment();
+        FavoritesFragment fragment = new FavoritesFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -52,6 +52,7 @@ public class WeeklyForecastFragment extends BaseFragment<FragmentWeeklyForecastB
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel.setNavigator(this);
+
     }
 
     @Override
@@ -64,11 +65,12 @@ public class WeeklyForecastFragment extends BaseFragment<FragmentWeeklyForecastB
     }
 
     private void setUpViews(){
-        RecyclerView rvWeekDays = ui.rvWeekDays;
+        adapter.setContext(getContext());
+        RecyclerView rvFavorites = ui.rvFavorites;
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        rvWeekDays.setLayoutManager(layoutManager);
-        rvWeekDays.setItemAnimator(new DefaultItemAnimator());
-        rvWeekDays.setAdapter(adapter);
+        rvFavorites.setLayoutManager(layoutManager);
+        rvFavorites.setItemAnimator(new DefaultItemAnimator());
+        rvFavorites.setAdapter(adapter);
     }
 
     private void subscribeToLiveData(){
@@ -88,12 +90,12 @@ public class WeeklyForecastFragment extends BaseFragment<FragmentWeeklyForecastB
 
     @Override
     public int getLayoutId() {
-        return R.layout.fragment_weekly_forecast;
+        return R.layout.fragment_favorites;
     }
 
     @Override
-    public WeeklyForecastViewModel getViewModel() {
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(WeeklyForecastViewModel.class);
+    public FavoritesViewModel getViewModel() {
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(FavoritesViewModel.class);
         return viewModel;
     }
 }
