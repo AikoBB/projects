@@ -1,5 +1,7 @@
 package com.iko.android.weather.di.builder;
 
+import com.iko.android.weather.ui.countries.CountryListActivity;
+import com.iko.android.weather.ui.countries.CountryListModule;
 import com.iko.android.weather.ui.main.MainActivity;
 import com.iko.android.weather.ui.main.MainModule;
 import com.iko.android.weather.ui.main.daily.DailyForecastProvider;
@@ -23,5 +25,8 @@ public abstract class ActivityBuilder {
 
     @ContributesAndroidInjector(modules = {MainModule.class, DailyForecastProvider.class, WeeklyForecastProvider.class, FavoritesProvider.class})
     abstract MainActivity bindMainActivity();
+
+    @ContributesAndroidInjector(modules = CountryListModule.class)
+    abstract CountryListActivity bindCountryListActivity();
 
 }

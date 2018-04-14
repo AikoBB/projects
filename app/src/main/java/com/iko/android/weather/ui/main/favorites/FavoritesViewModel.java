@@ -6,6 +6,7 @@ import android.databinding.ObservableArrayList;
 import com.iko.android.weather.data.DataManager;
 import com.iko.android.weather.data.model.ForeCast;
 import com.iko.android.weather.ui.base.BaseViewModel;
+import com.iko.android.weather.utils.State;
 import com.iko.android.weather.utils.rx.SchedulerProvider;
 
 import java.util.ArrayList;
@@ -19,10 +20,13 @@ public class FavoritesViewModel extends BaseViewModel<FavoritesNavigator> {
 
     private final ObservableArrayList<ForeCast> forecastList = new ObservableArrayList<>();
     private final MutableLiveData<List<ForeCast>> forecastLive;
+    private final MutableLiveData<State> openCountryListLive;
 
     public FavoritesViewModel(DataManager dataManager, SchedulerProvider schedulerProvider) {
         super(dataManager, schedulerProvider);
         forecastLive = new MutableLiveData<>();
+        openCountryListLive = new MutableLiveData<>();
+        openCountryListLive.setValue(State.IDLE);
     }
 
     public void fetchForecastForWeek(){
@@ -36,6 +40,10 @@ public class FavoritesViewModel extends BaseViewModel<FavoritesNavigator> {
         forecastLive.setValue(foreCasts);
     }
 
+    public void onAddCountryClick(){
+        openCountryListLive.setValue(State.SUCCESS);
+    }
+
     public void addForecastsToList(List<ForeCast> foreCasts){
         forecastList.clear();
         forecastList.addAll(foreCasts);
@@ -46,5 +54,9 @@ public class FavoritesViewModel extends BaseViewModel<FavoritesNavigator> {
 
     public MutableLiveData<List<ForeCast>> getForecastLive() {
         return forecastLive;
+    }
+
+    public MutableLiveData<State> getOpenCountryListLive() {
+        return openCountryListLive;
     }
 }

@@ -9,15 +9,12 @@
     </data>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/view_fill_parent"
         android:background="@drawable/splash_bgr_sky">
 
         <ImageView
             android:id="@+id/iv_sun"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
+            style="@style/image_splash"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/animated_splash_logo"/>
 
@@ -25,9 +22,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="@dimen/margin_small"
             android:gravity="center"
             android:text="@string/splash_app_title"/>
+
     </FrameLayout>
 
 </layout>

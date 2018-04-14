@@ -3,7 +3,9 @@ package com.iko.android.weather.utils;
 import android.databinding.BindingAdapter;
 import android.support.v7.widget.RecyclerView;
 
+import com.iko.android.weather.data.model.Country;
 import com.iko.android.weather.data.model.ForeCast;
+import com.iko.android.weather.ui.countries.adapter.CountriesAdapter;
 import com.iko.android.weather.ui.main.favorites.adapter.FavoriteCountriesAdapter;
 import com.iko.android.weather.ui.main.weekly.adapter.WeekForecastAdapter;
 
@@ -30,6 +32,15 @@ public final class BindingUtils {
         if(adapter != null){
             adapter.clearItems();
             adapter.addItems(foreCasts);
+        }
+    }
+
+    @BindingAdapter("adapterCountries")
+    public static  void addCountriesItems(RecyclerView recyclerView, ArrayList<Country> countries){
+        CountriesAdapter adapter = (CountriesAdapter)recyclerView.getAdapter();
+        if(adapter != null){
+            adapter.clearItems();
+            adapter.addItems(countries);
         }
     }
 }

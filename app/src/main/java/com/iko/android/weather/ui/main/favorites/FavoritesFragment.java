@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.iko.android.weather.BR;
@@ -16,7 +17,9 @@ import com.iko.android.weather.R;
 import com.iko.android.weather.data.model.ForeCast;
 import com.iko.android.weather.databinding.FragmentFavoritesBinding;
 import com.iko.android.weather.ui.base.BaseFragment;
+import com.iko.android.weather.ui.countries.CountryListActivity;
 import com.iko.android.weather.ui.main.favorites.adapter.FavoriteCountriesAdapter;
+import com.iko.android.weather.utils.State;
 
 import java.util.List;
 
@@ -74,13 +77,14 @@ public class FavoritesFragment extends BaseFragment<FragmentFavoritesBinding, Fa
     }
 
     private void subscribeToLiveData(){
-        viewModel.getForecastLive()
-                .observe(this, new Observer<List<ForeCast>>() {
-                    @Override
-                    public void onChanged(@Nullable List<ForeCast> foreCasts) {
-                        viewModel.addForecastsToList(foreCasts);
-                    }
-                });
+        viewModel.getForecastLive().observe(this, foreCasts ->  viewModel.addForecastsToList(foreCasts));
+        viewModel.getOpenCountryListLive().observe(this,state -> openCountryListActivity(state));
+    }
+
+    private void  openCountryListActivity(State state){
+        if (state == State.SUCCESS){
+            startActivity(CountryListActivity.getStartIntent(getContext()));
+        }
     }
 
     @Override

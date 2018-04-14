@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.iko.android.weather.ui.countries.adapter.CountryViewModel"/>
+    </data>
+
+    <TextView
+        style="@style/text_country_list"
+        android:text="@{viewModel.name}"/>
+
+</layout>

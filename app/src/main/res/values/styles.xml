@@ -1,11 +1,123 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primaryDark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="text_app">
+        <item name="android:textColor">@color/content_text</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_content" parent="text_app">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="text_country_list" parent="text_content">
+        <item name="android:padding">@dimen/padding_xsmall</item>
+    </style>
+
+    <style name="text_list_content" parent="text_app">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_xxmedium</item>
+    </style>
+
+    <style name="text_daily_forecast_bottom_right" parent="text_list_content">
+        <item name="android:gravity">right</item>
+    </style>
+    
+    <style name="text_daily_forecast_atmosphere" parent="text_content">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_daily_forecast_atmosphere_title" parent="text_daily_forecast_atmosphere">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/bright_blue</item>
+        <item name="android:textSize">@dimen/text_xxxsmall</item>
+    </style>
+
+    <style name="text_daily_forecast_temperature" parent="text_app">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/text_current_temperature</item>
+    </style>
+
+    <style name="text_daily_forecast_maxmin_temperatures" parent="text_app">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="text_empty_list" parent="text_app">
+        <item name="android:textSize">@dimen/text_xxxmedium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_fav_country" parent="text_app">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_xxxmedium</item>
+    </style>
+
+    <style name="linear_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="linear_horizontal_daily_forecast_bottom" parent="linear_horizontal">
+        <item name="android:padding">@dimen/padding_xxsmall</item>
+    </style>
+
+    <style name="text_header_bold" parent="text_app">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/padding_xxxsmall</item>
+        <item name="android:textSize">@dimen/text_xxxmedium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="linear_horizontal_daily_forecast_atmosphere" parent="linear_horizontal">
+        <item name="android:layout_marginLeft">@dimen/margin_small</item>
+        <item name="android:weightSum">4</item>
+    </style>
+
+    <style name="image_splash">
+        <item name="android:layout_width">@dimen/icon_splash_logo</item>
+        <item name="android:layout_height">@dimen/icon_splash_logo</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="float_button">
+        <item name="android:layout_width">@dimen/fbutton</item>
+        <item name="android:layout_height">@dimen/fbutton</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:layout_marginRight">@dimen/padding_xxsmall</item>
+        <item name="android:layout_marginBottom">@dimen/bottom_nav_height</item>
+    </style>
+
+    <style name="bottom_nav">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/color_primary</item>
+    </style>
+
+    <style name="cardview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">230dp</item>
+        <item name="android:background"></item>
+        <item name="android:layout_margin">@dimen/margin_xxsmall</item>
+    </style>
+
+    <style name="view_fill_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 
 </resources>

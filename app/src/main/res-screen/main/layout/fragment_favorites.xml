@@ -9,9 +9,7 @@
             type="com.iko.android.weather.ui.main.favorites.FavoritesViewModel"/>
     </data>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <FrameLayout style="@style/view_fill_parent">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_favorites"
@@ -19,6 +17,12 @@
             android:layout_height="wrap_content"
             tools:listitem="@layout/item_favorite_country"
             app:adapterFavs="@{viewModel.forecastList}"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_add_country"
+            style="@style/float_button"
+            app:srcCompat="@drawable/ic_add"
+            android:onClick="@{() -> viewModel.onAddCountryClick()}"/>
 
     </FrameLayout>
 

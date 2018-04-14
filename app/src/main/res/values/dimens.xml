@@ -11,4 +11,35 @@
     <dimen name="text_xlarge">26sp</dimen>
     <dimen name="text_xxlarge">28sp</dimen>
     <dimen name="text_xxxlarge">30sp</dimen>
+    <dimen name="text_current_temperature">60sp</dimen>
+
+    <dimen name="padding_xxxsmall">5dp</dimen>
+    <dimen name="padding_xxsmall">10dp</dimen>
+    <dimen name="padding_xsmall">15dp</dimen>
+    <dimen name="padding_small">20dp</dimen>
+    <dimen name="padding_medium">25dp</dimen>
+    <dimen name="padding_xmedium">30dp</dimen>
+    <dimen name="padding_xxmedium">35dp</dimen>
+    <dimen name="padding_xxxmedium">40dp</dimen>
+    <dimen name="padding_large">45dp</dimen>
+    <dimen name="padding_xlarge">50dp</dimen>
+    <dimen name="padding_xxlarge">55dp</dimen>
+    <dimen name="padding_xxxlarge">60dp</dimen>
+
+    <dimen name="margin_xxxsmall">5dp</dimen>
+    <dimen name="margin_xxsmall">10dp</dimen>
+    <dimen name="margin_xsmall">15dp</dimen>
+    <dimen name="margin_small">20dp</dimen>
+    <dimen name="margin_medium">25dp</dimen>
+    <dimen name="margin_xmedium">30dp</dimen>
+    <dimen name="margin_xxmedium">35dp</dimen>
+    <dimen name="margin_xxxmedium">40dp</dimen>
+    <dimen name="margin_large">45dp</dimen>
+    <dimen name="margin_xlarge">50dp</dimen>
+    <dimen name="margin_xxlarge">55dp</dimen>
+    <dimen name="margin_xxxlarge">60dp</dimen>
+    <dimen name="bottom_nav_height">65dp</dimen>
+
+    <dimen name="icon_splash_logo">80dp</dimen>
+    <dimen name="fbutton">60dp</dimen>
 </resources>

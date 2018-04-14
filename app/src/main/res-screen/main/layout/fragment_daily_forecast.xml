@@ -8,43 +8,30 @@
             type="com.iko.android.weather.ui.main.daily.DailyForecastViewModel"/>
     </data>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <FrameLayout style="@style/view_fill_parent">
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/view_fill_parent"
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:background="@android:color/darker_gray">
+                style="@style/cardview"
+                app:cardCornerRadius="@dimen/padding_small">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <RelativeLayout style="@style/view_fill_parent">
 
                     <TextView
                         android:id="@+id/tv_country"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/text_header_bold"
                         android:layout_alignParentTop="true"
-                        android:paddingTop="5dp"
-                        android:gravity="center"
-                        android:text="Bishkek, Kyrgyzstan"
-                        android:textColor="@color/textColor"
-                        android:textSize="@dimen/text_xxxmedium"
-                        android:textStyle="bold"/>
+                        android:text="Bishkek, Kyrgyzstan"/>
 
                     <TextView
                         android:id="@+id/tv_date"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/text_app"
                         android:layout_below="@id/tv_country"
                         android:gravity="center"
                         android:text="SATURDAY, 18 MARCH"
-                        android:textColor="@color/textColor"
                         android:textSize="@dimen/text_medium"/>
 
                     <LinearLayout
@@ -53,37 +40,28 @@
                         android:orientation="vertical"
                         android:layout_toLeftOf="@id/tv_degree"
                         android:layout_centerInParent="true"
-                        android:layout_marginRight="20dp">
+                        android:layout_marginRight="@dimen/margin_small">
 
                         <TextView
                             android:id="@+id/tv_max_degree"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/text_daily_forecast_maxmin_temperatures"
                             android:text="18&#xb0;"
-                            android:drawableLeft="@drawable/menu_up_outline"
-                            android:textColor="@color/textColor"
-                            android:textSize="@dimen/text_small"/>
+                            android:drawableLeft="@drawable/menu_up_outline"/>
 
                         <TextView
                             android:id="@+id/tv_min_degree"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/text_daily_forecast_maxmin_temperatures"
                             android:text="14&#xb0;"
-                            android:drawableLeft="@drawable/menu_down_outline"
-                            android:textColor="@color/textColor"
-                            android:textSize="@dimen/text_small"/>
+                            android:drawableLeft="@drawable/menu_down_outline"/>
 
                     </LinearLayout>
 
                     <TextView
                         android:id="@+id/tv_degree"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/text_daily_forecast_temperature"
                         android:layout_centerInParent="true"
                         android:text="16"
-                        android:drawableRight="@drawable/temperature_celsius"
-                        android:textColor="@color/textColor"
-                        android:textSize="60sp"/>
+                        android:drawableRight="@drawable/temperature_celsius"/>
 
                     <ImageView
                         android:layout_width="30dp"
@@ -94,100 +72,54 @@
                         app:srcCompat="@drawable/weather_cloudy"/>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_above="@id/ll_title"
-                        android:layout_marginLeft="20dp"
-                        android:weightSum="4">
+                        style="@style/linear_horizontal_daily_forecast_atmosphere"
+                        android:layout_above="@id/ll_title">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/text_daily_forecast_atmosphere"
                             android:drawableLeft="@drawable/water_percent"
-                            android:text="24%"
-                            android:textColor="@color/textColor"
-                            android:textSize="@dimen/text_medium"
-                            android:textStyle="bold"/>
+                            android:text="24%" />
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/text_daily_forecast_atmosphere"
                             android:drawableLeft="@drawable/flag_variant"
-                            android:text="5mph"
-                            android:textColor="@color/textColor"
-                            android:textSize="@dimen/text_medium"
-                            android:textStyle="bold"/>
+                            android:text="5mph"/>
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/text_daily_forecast_atmosphere"
                             android:drawableLeft="@drawable/compass_outline"
-                            android:text="SW"
-                            android:textColor="@color/textColor"
-                            android:textSize="@dimen/text_medium"
-                            android:textStyle="bold"/>
+                            android:text="SW"/>
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/text_daily_forecast_atmosphere"
                             android:drawableLeft="@drawable/ic_visibility"
-                            android:text="16.1"
-                            android:textColor="@color/textColor"
-                            android:textSize="@dimen/text_medium"
-                            android:textStyle="bold"/>
+                            android:text="16.1"/>
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/ll_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:weightSum="4">
-
+                        style="@style/linear_horizontal_daily_forecast_atmosphere"
+                        android:layout_marginBottom="@dimen/margin_xxsmall"
+                        android:layout_alignParentBottom="true">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/text_daily_forecast_atmosphere_title"
                             android:text="@string/humidity"
-                            android:gravity="center"
-                            android:textColor="@color/brightBlue"
-                            android:textSize="@dimen/text_xxxsmall"/>
+                            android:gravity="center"/>
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/text_daily_forecast_atmosphere_title"
                             android:text="@string/wind"
-                            android:gravity="center"
-                            android:textColor="@color/brightBlue"
-                            android:textSize="@dimen/text_xxxsmall"/>
+                            android:gravity="center"/>
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/direction"
-                            android:textColor="@color/brightBlue"
-                            android:textSize="@dimen/text_xxxsmall"/>
-
+                            style="@style/text_daily_forecast_atmosphere_title"
+                            android:text="@string/direction"/>
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/visibility"
-                            android:textColor="@color/brightBlue"
-                            android:textSize="@dimen/text_xxxsmall"/>
+                            style="@style/text_daily_forecast_atmosphere_title"
+                            android:text="@string/visibility"/>
 
                     </LinearLayout>
 
@@ -195,100 +127,52 @@
 
             </android.support.v7.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+            <LinearLayout style="@style/linear_horizontal_daily_forecast_bottom">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/pressure"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_list_content"
+                    android:text="@string/pressure"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="101.192kPa"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_daily_forecast_bottom_right"
+                    android:text="101.192kPa"/>
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+            <LinearLayout style="@style/linear_horizontal_daily_forecast_bottom">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/sunrise"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_list_content"
+                    android:text="@string/sunrise"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="05:14"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_daily_forecast_bottom_right"
+                    android:text="05:14"/>
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+            <LinearLayout style="@style/linear_horizontal_daily_forecast_bottom">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/sunset"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_list_content"
+                    android:text="@string/sunset"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="19:35"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_daily_forecast_bottom_right"
+                    android:text="19:35"/>
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+            <LinearLayout style="@style/linear_horizontal_daily_forecast_bottom">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/uvindex"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_list_content"
+                    android:text="@string/uvindex"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="101.192kPa"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/text_xxmedium"/>
+                    style="@style/text_daily_forecast_bottom_right"
+                    android:text="101.192kPa"/>
+
             </LinearLayout>
 
         </LinearLayout>

@@ -9,9 +9,7 @@
             type="com.iko.android.weather.ui.main.weekly.WeeklyForecastViewModel"/>
     </data>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <FrameLayout style="@style/view_fill_parent">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_week_days"
